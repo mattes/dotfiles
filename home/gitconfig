@@ -1,0 +1,11 @@
+[core]
+  user = Matthias Kadenbach
+  email = matthias.kadenbach@gmail.com
+  excludesfile = ~/.gitignore
+
+[push]
+  default = current
+
+[user]
+  name = Matthias Kadenbach
+  email = matthias.kadenbach@gmail.com

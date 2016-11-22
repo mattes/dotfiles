@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+if [[ $- != *i* ]] ; then
+  # shell is non-interactive
+  return
+fi
+
+# only load if not yet loaded ...
+if ! declare -F shell_is_interactive > /dev/null; then
+  echo "Loading dotfiles ..."
+  # cache files if not present and load them
+  if [[ ! -e ~/.bash/cached.linux.sh || ! -e ~/.bash/cached.darwin.sh ]]; then
+    . ~/.bash/build-cache.sh
+  fi
+  source ~/.bash/cached.$(echo $(uname) | tr '[:upper:]' '[:lower:]').sh
+
+  # load system specific settings if present
+  if [[ -e ~/.localrc ]]; then
+    source ~/.localrc
+  fi
+fi

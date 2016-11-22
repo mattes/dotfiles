@@ -1,0 +1,3 @@
+function rmtrash {
+  mv "$*" ~/.Trash
+}

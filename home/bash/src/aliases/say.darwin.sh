@@ -1,0 +1,6 @@
+alias sayFemale="say -v 'Vicki'"
+alias sayMale="say -v 'Fred'"
+alias sayBadNews="say -v 'Bad News'"
+alias sayCellos="say -v 'Cellos'"
+alias sayHysterical="say -v 'Hysterical'"
+alias sayPipeOrgan="say -v 'Pipe Organ'"

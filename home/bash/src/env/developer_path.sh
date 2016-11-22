@@ -1,0 +1,1 @@
+export DEVELOPER_PATH="$HOME/Developer"

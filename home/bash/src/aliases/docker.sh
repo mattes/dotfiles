@@ -1,0 +1,7 @@
+alias docker_rma='docker rm -f $(docker ps -aq)'
+alias docker_rmia='docker rmi -f $(docker images -q)'
+alias dops='docker ps'
+alias doex='docker_exec'
+alias doip='docker_container_ip4'
+alias doips='docker_container_ips'
+alias doubuntu='docker run -it --rm ubuntu:14.04 bash'
