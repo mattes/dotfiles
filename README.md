@@ -25,6 +25,7 @@ brew install bash bash-completion curl openssl tldr tree watch nmap
 
 brew install tmux
 gem install tmuxinator
+# Follow configuration here: https://github.com/mattes/dotfiles/blob/master/home/tmux.conf
 
 brew tap neovim/neovim
 brew install neovim
