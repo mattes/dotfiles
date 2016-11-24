@@ -22,17 +22,25 @@ cd dotfiles
 
 ```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install bash bash-completion curl openssl tldr tree watch nmap the_silver_searcher
+brew install bash bash-completion curl openssl tldr tree watch nmap go the_silver_searcher
 
 brew install tmux
 gem install tmuxinator
 # Follow configuration here: https://github.com/mattes/dotfiles/blob/master/home/tmux.conf
 
+# install neovim
 brew tap neovim/neovim
 brew install neovim
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-mkdir -p ~/.config/nvim; ln -s ~/.vimrc ~/.config/nvim/init.vim
-nvim +PluginInstall +qall
+
+# install vim-plug and set up config files
+mkdir -p ~/.config
+ln -s ~/.nvim ~/.config/nvim
+curl -fLo ~/.nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ln -s ~/.nvimrc ~/.config/nvim/init.vim
+pip3 install neovim
+go get -u github.com/nsf/gocode # needed for go autocomplete
+
+# vi -> vi.orig and nvim -> vi
 mv "$(which vi)" "$(which vi).orig"
 ln -s "$(which nvim)" "$(dirname $(which nvim))/vi"
 ```

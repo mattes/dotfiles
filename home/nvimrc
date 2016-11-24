@@ -1,23 +1,18 @@
-set nocompatible
-filetype off
+call plug#begin('~/.nvim/plugged')
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'kien/ctrlp.vim'
+Plug 'tomtom/tcomment_vim'
+Plug 'mileszs/ack.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'itchyny/lightline.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'fatih/vim-go'
+Plug 'tpope/vim-surround'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'itchyny/lightline.vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'fatih/vim-go'
-Plugin 'Shougo/deoplete.nvim'
-
-
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 " disable mouse (set to command-line mode)
 set mouse=c 
@@ -27,7 +22,7 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-
+" https://github.com/Shougo/deoplete.nvim/blob/master/doc%2Fdeoplete.txt
 call deoplete#enable()
 
 " Enable Solarized Scheme
