@@ -1,11 +1,12 @@
 Dotfiles
 ========
 
-Schemes
--------
+Solarized Scheme
+----------------
 
-  * https://github.com/chriskempson/base16 ([previews](https://belak.github.io/base16-emacs/))
-  * https://github.com/vbwx/base16-terminal-app
+Dowload [solarized_dark_mattes.terminal](/solarized_dark_mattes.terminal), double click, and make it the default in Terminal.app.
+The scheme is an adapted version of https://github.com/altercation/solarized/pull/314.
+I couldn't get the pre-packaged version that comes with the official Solarized download to work.
 
 
 Installation
@@ -21,7 +22,7 @@ cd dotfiles
 
 ```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install bash bash-completion curl openssl tldr tree watch nmap
+brew install bash bash-completion curl openssl tldr tree watch nmap the_silver_searcher
 
 brew install tmux
 gem install tmuxinator

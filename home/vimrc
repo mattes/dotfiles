@@ -7,8 +7,47 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'itchyny/lightline.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'fatih/vim-go'
+Plugin 'Shougo/deoplete.nvim'
+
 
 call vundle#end()
 filetype plugin indent on
 
-set mouse=c " command-line mode
+" disable mouse (set to command-line mode)
+set mouse=c 
+
+" Use ag instead of ack
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+
+call deoplete#enable()
+
+" Enable Solarized Scheme
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1 " unclear if this is really needed?
+syntax enable
+set background=dark
+colorscheme solarized
+
+set number
+
+let g:lightline = {
+\ 'colorscheme': 'solarized',
+\ }
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+" let g:go_play_open_browser = 0
+"
