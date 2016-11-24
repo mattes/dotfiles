@@ -7,9 +7,9 @@ function exist {
   # -L returns true even if symlink is broken
   # -d returns true if it is a directory
   if [[ -e $1 || -L $1 || -d $1 ]]; then 
-    return 1
-  else
     return 0
+  else
+    return 1
   fi    
 }
 

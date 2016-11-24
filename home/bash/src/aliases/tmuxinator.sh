@@ -1,0 +1,1 @@
+alias muxs='tmuxinator start'
