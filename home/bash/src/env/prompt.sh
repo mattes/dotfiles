@@ -1,16 +1,14 @@
-# get current branch in git repo
-function parse_git_branch {
-  BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
-  if [ ! "${BRANCH}" == "" ]
-  then
-    STAT=`parse_git_dirty`
-    echo " [${BRANCH}${STAT}]"
-  else
-    echo ""
-  fi
-}
+#function parse_git_branch {
+#  BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
+#  if [ ! "${BRANCH}" == "" ]
+#  then
+#  STAT=`parse_git_dirty`
+#    echo " [${BRANCH}${STAT}]"
+#  else
+#    echo ""
+#  fi
+#}
 
-# get current status of git repo
 function parse_git_dirty {
   status=`git status 2>&1 | tee`
   dirty=`echo -n "${status}" 2> /dev/null | grep "modified:" &> /dev/null; echo "$?"`
@@ -38,12 +36,7 @@ function parse_git_dirty {
   if [ "${dirty}" == "0" ]; then
     bits="!${bits}"
   fi
-  if [ ! "${bits}" == "" ]; then
-    echo " ${bits}"
-  else
-    echo ""
-  fi
+  echo $bits
 }
 
-export PS1="\[\e[00;34m\]\W\[\e[0m\]\[\e[00;37m\]\`parse_git_branch\`\[\e[0m\] \\$ "
-
+export PS1="\[\033[0;34m\]\W \[\033[0;37m\]\`parse_git_dirty\`$\[\033[0m\] "
