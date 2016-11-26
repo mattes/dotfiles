@@ -35,6 +35,7 @@ brew install neovim
 # install vim-plug and set up config files
 mkdir -p ~/.config
 ln -s ~/.nvim ~/.config/nvim
+mkdir ~/.nvim/sessions
 curl -fLo ~/.nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ln -s ~/.nvimrc ~/.config/nvim/init.vim
 pip3 install neovim
