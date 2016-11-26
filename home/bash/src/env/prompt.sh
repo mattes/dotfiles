@@ -22,7 +22,7 @@ function parse_git_dirty {
     bits=">${bits}"
   fi
   if [ "${ahead}" == "0" ]; then
-    bits="*${bits}"
+    bits="*$bits"
   fi
   if [ "${newfile}" == "0" ]; then
     bits="+${bits}"
@@ -36,7 +36,7 @@ function parse_git_dirty {
   if [ "${dirty}" == "0" ]; then
     bits="!${bits}"
   fi
-  echo $bits
+  echo "$bits"
 }
 
 export PS1="\[\033[0;34m\]\W \[\033[0;37m\]\`parse_git_dirty\`\$\[\033[0m\] "
