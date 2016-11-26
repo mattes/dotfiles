@@ -21,12 +21,19 @@ cd dotfiles
 ### Install Essentials
 
 ```bash
+# bootstrap system
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install bash bash-completion curl openssl tldr tree watch nmap go the_silver_searcher
+brew analytics off
+brew install bash bash-completion curl openssl tldr tree watch nmap go the_silver_searcher python3
 
+# install ruby
+brew install rbenv ruby-build
+brew link --force curl
+rbenv install 2.3.3 && rbenv global 2.3.3 && rbenv rehash
+
+# install tmux and helpers
 brew install tmux
 gem install tmuxinator
-# Follow configuration here: https://github.com/mattes/dotfiles/blob/master/home/tmux.conf
 
 # install neovim
 brew tap neovim/neovim
@@ -34,16 +41,14 @@ brew install neovim
 
 # install vim-plug and set up config files
 mkdir -p ~/.config
+mkdir -p ~/.nvim/sessions
 ln -s ~/.nvim ~/.config/nvim
-mkdir ~/.nvim/sessions
-curl -fLo ~/.nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ln -s ~/.nvimrc ~/.config/nvim/init.vim
-pip3 install neovim
-go get -u github.com/nsf/gocode # needed for go autocomplete
-
-# vi -> vi.orig and nvim -> vi
-mv "$(which vi)" "$(which vi).orig"
 ln -s "$(which nvim)" "$(dirname $(which nvim))/vi"
+pip3 install neovim
+curl -fLo ~/.nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+go get -u github.com/nsf/gocode # needed for go autocomplete
+# run `:PlugInstall` when neovim is started for the first time
 ```
 
 
@@ -61,49 +66,6 @@ Further reading:
   * [What is an Interactive Shell?](http://www.gnu.org/software/bash/manual/bashref.html#What-is-an-Interactive-Shell_003f) and
   * [more details about bash startup files](http://www.gnu.org/software/bash/manual/bashref.html#Bash-Startup-Files).
 
-
-Fresh Mac OS X Install
-----------------------
-
-For what it's worth: A fresh Mac OS X installation comes with an /etc/profile file only. No other files are found (see above).
-
-/etc/profile
-````
-# System-wide .profile for sh(1)
-
-if [ -x /usr/libexec/path_helper ]; then
-  eval `/usr/libexec/path_helper -s`
-fi
-
-if [ "${BASH-no}" != "no" ]; then
-  [ -r /etc/bashrc ] && . /etc/bashrc
-fi
-````
-
-/etc/bashrc
-````
-# System-wide .bashrc file for interactive bash(1) shells.
-if [ -z "$PS1" ]; then
-   return
-fi
-
-PS1='\h:\W \u\$ '
-# Make bash check its window size after a process completes
-shopt -s checkwinsize
-# Tell the terminal about the working directory at each prompt.
-if [ "$TERM_PROGRAM" == "Apple_Terminal" ] && [ -z "$INSIDE_EMACS" ]; then
-    update_terminal_cwd() {
-        # Identify the directory using a "file:" scheme URL,
-        # including the host name to disambiguate local vs.
-        # remote connections. Percent-escape spaces.
-  local SEARCH=' '
-  local REPLACE='%20'
-  local PWD_URL="file://$HOSTNAME${PWD//$SEARCH/$REPLACE}"
-  printf '\e]7;%s\a' "$PWD_URL"
-    }
-    PROMPT_COMMAND="update_terminal_cwd; $PROMPT_COMMAND"
-fi
-```
 
 More Information
 ----------------
