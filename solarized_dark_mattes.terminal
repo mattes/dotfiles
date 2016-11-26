@@ -161,14 +161,17 @@
 	<true/>
 	<key>CursorColor</key>
 	<data>
-	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
-	AAGGoKMHCA9VJG51bGzTCQoLDA0OV05TV2hpdGVcTlNDb2xvclNwYWNlViRjbGFzc08Q
-	ETAuNSAwLjc5ODQwMDA0MjgAEAOAAtIQERITWiRjbGFzc25hbWVYJGNsYXNzZXNXTlND
-	b2xvcqISFFhOU09iamVjdF8QD05TS2V5ZWRBcmNoaXZlctEXGFRyb290gAEIERojLTI3
-	O0FIUF1keHp8gYyVnaCpu77DAAAAAAAAAQEAAAAAAAAAGQAAAAAAAAAAAAAAAAAAAMU=
+	YnBsaXN0MDDUAQIDBAUGHyBYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
+	AAGGoKUHCBEVHFUkbnVsbNQJCgsMDQ4PEFdOU1doaXRlXE5TQ29sb3JTcGFjZV8QEk5T
+	Q3VzdG9tQ29sb3JTcGFjZVYkY2xhc3NPEA8xIDAuNjQ3NTgxMzM1NgAQA4ACgATSEgwT
+	FFROU0lEEAKAA9IWFxgZWiRjbGFzc25hbWVYJGNsYXNzZXNcTlNDb2xvclNwYWNlohob
+	XE5TQ29sb3JTcGFjZVhOU09iamVjdNIWFx0eV05TQ29sb3KiHRtfEA9OU0tleWVkQXJj
+	aGl2ZXLRISJUcm9vdIABAAgAEQAaACMALQAyADcAPQBDAEwAVABhAHYAfQCPAJEAkwCV
+	AJoAnwChAKMAqACzALwAyQDMANkA4gDnAO8A8gEEAQcBDAAAAAAAAAIBAAAAAAAAACMA
+	AAAAAAAAAAAAAAAAAAEO
 	</data>
 	<key>CursorType</key>
-	<integer>2</integer>
+	<integer>1</integer>
 	<key>DisableANSIColor</key>
 	<false/>
 	<key>Font</key>
@@ -195,17 +198,25 @@
 	<key>ShouldRestoreContent</key>
 	<false/>
 	<key>ShowActiveProcessArgumentsInTabTitle</key>
-	<true/>
+	<false/>
 	<key>ShowActiveProcessInTabTitle</key>
 	<true/>
 	<key>ShowActiveProcessInTitle</key>
 	<false/>
 	<key>ShowCommandKeyInTitle</key>
 	<false/>
+	<key>ShowComponentsWhenTabHasCustomTitle</key>
+	<false/>
 	<key>ShowDimensionsInTitle</key>
 	<false/>
+	<key>ShowRepresentedURLInTabTitle</key>
+	<true/>
 	<key>ShowRepresentedURLInTitle</key>
 	<false/>
+	<key>ShowRepresentedURLPathInTabTitle</key>
+	<true/>
+	<key>ShowTTYNameInTabTitle</key>
+	<true/>
 	<key>ShowWindowSettingsNameInTitle</key>
 	<false/>
 	<key>TextBoldColor</key>
@@ -293,7 +304,7 @@
 		<key>F711</key>
 		<string>[26~</string>
 		<key>F712</key>
-		<string></string>
+		<string>[28~</string>
 		<key>F713</key>
 		<string>[29~</string>
 		<key>F714</key>
@@ -357,6 +368,8 @@
 	<true/>
 	<key>type</key>
 	<string>Window Settings</string>
+	<key>useOptionAsMetaKey</key>
+	<false/>
 	<key>warnOnShellCloseAction</key>
 	<integer>2</integer>
 </dict>
