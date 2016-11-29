@@ -24,7 +24,7 @@ cd dotfiles
 # bootstrap system
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew analytics off
-brew install bash bash-completion curl openssl tldr tree watch nmap go the_silver_searcher python3
+brew install bash bash-completion curl openssl tldr tree watch nmap jq go the_silver_searcher python3
 
 # install ruby
 brew install rbenv ruby-build
