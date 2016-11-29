@@ -49,6 +49,9 @@ pip3 install neovim
 curl -fLo ~/.nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 go get -u github.com/nsf/gocode # needed for go autocomplete
 # run `:PlugInstall` when neovim is started for the first time
+
+# install quick look plugin
+https://github.com/whomwah/qlstephen
 ```
 
 
