@@ -26,6 +26,9 @@ cd dotfiles
 brew analytics off
 brew install bash bash-completion curl openssl tldr tree watch nmap jq go the_silver_searcher python3
 
+# install quick look plugin
+https://github.com/whomwah/qlstephen
+
 # install ruby
 brew install rbenv ruby-build
 brew link --force curl
@@ -35,23 +38,15 @@ rbenv install 2.3.3 && rbenv global 2.3.3 && rbenv rehash
 brew install tmux
 gem install tmuxinator
 
-# install neovim
-brew tap neovim/neovim
-brew install neovim
+# install vim 
+brew install vim
 
 # install vim-plug and set up config files
-mkdir -p ~/.config
-mkdir -p ~/.nvim/sessions
-ln -s ~/.nvim ~/.config/nvim
-ln -s ~/.nvimrc ~/.config/nvim/init.vim
-ln -s "$(which nvim)" "$(dirname $(which nvim))/vi"
-pip3 install neovim
-curl -fLo ~/.nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+mkdir -p ~/.vim/sessions
+ln -s "$(which vim)" /usr/local/bin/vi
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 go get -u github.com/nsf/gocode # needed for go autocomplete
-# run `:PlugInstall` when neovim is started for the first time
-
-# install quick look plugin
-https://github.com/whomwah/qlstephen
+# run `:PlugInstall` when vim is started for the first time
 ```
 
 
