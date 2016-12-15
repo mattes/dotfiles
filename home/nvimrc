@@ -1,87 +1,69 @@
 set nocompatible
 filetype plugin on
 
-" disable mouse (set to command-line mode)
-set mouse=c 
+set mouse=a
 
 " show line numbers
 set number
-
-" Make it obvious where 80 characters is
-set textwidth=80
-" set colorcolumn=-1
-
+set nowrap
 " Use space key as leader key
 let mapleader = "\<Space>"
 
 " Intent with 2 spaces
 set tabstop=2
 set shiftwidth=2
-set softtabstop=2
 set expandtab
+set smartindent
+set autoindent
+set noswapfile
 
-" Disable arrow keys
-noremap <Up> <Nop> 
-noremap <Down> <Nop> 
-noremap <Left> <Nop> 
-noremap <Right> <Nop>
+set clipboard=unnamed
+
+set autoread
 
 " Load plugins ...
 call plug#begin('~/.nvim/plugged')
 
 " Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
-Plug 'christoomey/vim-tmux-navigator'
-" Plug 'tomtom/tcomment_vim'
+Plug 'tomtom/tcomment_vim'
 Plug 'mileszs/ack.vim'
-" Plug 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'itchyny/lightline.vim'
 Plug 'altercation/vim-colors-solarized'
-" Plug 'fatih/vim-go'
 " Plug 'tpope/vim-surround'
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'fatih/vim-go'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'ervandew/supertab'
 
 call plug#end()
 
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
-nmap <Leader><Leader> V
 nnoremap <Leader>n :tabnew<CR>:vsplit<CR>:vsplit<CR> 
-
-" Ctrl-<hjkl> to change splits
-" noremap <C-h> <C-w>h
-"noremap <C-j> <C-w>j
-"noremap <C-k> <C-w>k
-"noremap <C-l> <C-w>l
 
 " <Tab> to cycle through splits
 noremap <Tab> <C-w>w
+noremap <S-Tab> <C-w>p
 
 " <Leader><Tab> to cycle through tabs
 noremap <Leader><Tab> gt
 
-
 " Close the current split
 nmap <leader>x <C-w>c
+
+" Duplicate line
+nnoremap dl mzyyP
 
 set splitbelow
 set splitright
 
 " Reload vimrc
-:nmap <leader>rv :source $MYVIMRC<CR>
+:nmap <leader>r :source $MYVIMRC<CR>
 
-" modify ctrlP to remove spaces when searching
-let g:ctrlp_abbrev = {
-  \ 'gmode': 'i',
-  \ 'abbrevs': [
-    \ {
-      \ 'pattern': ' ',
-      \ 'expanded': '',
-      \ 'mode': 'pfrz',
-    \ },
-    \ ]
-  \ }
+" Speed up CtrlP
+let g:ctrlp_user_command = ['.git/', 'git ls-files --cached --others --exclude-standard %s']
 
 
 " Use ag instead of ack
@@ -110,5 +92,6 @@ let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 " let g:go_play_open_browser = 0
+
 
 
