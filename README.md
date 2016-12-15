@@ -39,7 +39,7 @@ brew install tmux
 gem install tmuxinator
 
 # install vim 
-brew install vim
+brew install vim --with-lua
 
 # install vim-plug and set up config files
 mkdir -p ~/.vim/sessions
