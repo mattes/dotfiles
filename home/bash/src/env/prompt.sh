@@ -39,4 +39,4 @@ function parse_git_dirty {
   echo "$bits"
 }
 
-export PS1="\[\033[0;34m\]\W \[\033[0;37m\]\`parse_git_dirty\`\$\[\033[0m\] "
+export PS1="\[\033[0;34m\]\W \[\033[0;90m\]\`parse_git_dirty\`\$\[\033[0m\] "

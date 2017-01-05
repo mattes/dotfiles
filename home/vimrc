@@ -20,9 +20,10 @@ set noswapfile
 set clipboard=unnamed
 
 set autoread
+au CursorHold * checktime
 
 " Load plugins ...
-call plug#begin('~/.nvim/plugged')
+call plug#begin('~/.vim/plugged')
 
 " Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
@@ -30,7 +31,8 @@ Plug 'tomtom/tcomment_vim'
 Plug 'mileszs/ack.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'itchyny/lightline.vim'
-Plug 'altercation/vim-colors-solarized'
+" Plug 'altercation/vim-colors-solarized'
+Plug 'NLKNguyen/papercolor-theme'
 " Plug 'tpope/vim-surround'
 
 Plug 'fatih/vim-go'
@@ -65,7 +67,7 @@ set splitright
 
 " Speed up CtrlP
 let g:ctrlp_user_command = ['.git/', 'git ls-files --cached --others --exclude-standard %s']
-
+let g:ctrlp_use_caching = 0
 
 " Use ag instead of ack
 if executable('ag')
@@ -78,12 +80,12 @@ endif
 " Enable Solarized Scheme
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1 " unclear if this is really needed?
 syntax enable
-set background=dark
-colorscheme solarized
+set background=light
+colorscheme PaperColor
 
 
 let g:lightline = {
-\ 'colorscheme': 'solarized',
+\ 'colorscheme': 'PaperColor',
 \ }
 
 let g:neocomplete#enable_at_startup = 1
@@ -99,4 +101,17 @@ let g:go_highlight_build_constraints = 1
 
 au FileType go nmap <Leader>gd <Plug>(go-doc-browser)
 
+" Called once right before you start selecting multiple cursors
+function! Multiple_cursors_before()
+  if exists(':NeoCompleteLock')==2
+    exe 'NeoCompleteLock'
+  endif
+endfunction
 
+" Called once only when the multiple selection is canceled (default
+" <Esc>)
+function! Multiple_cursors_after()
+  if exists(':NeoCompleteUnlock')==2
+    exe 'NeoCompleteUnlock'
+  endif
+endfunction
