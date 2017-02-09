@@ -31,7 +31,6 @@ Plug 'tomtom/tcomment_vim'
 Plug 'mileszs/ack.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'itchyny/lightline.vim'
-" Plug 'altercation/vim-colors-solarized'
 Plug 'NLKNguyen/papercolor-theme'
 " Plug 'tpope/vim-surround'
 
@@ -39,7 +38,12 @@ Plug 'fatih/vim-go'
 Plug 'Shougo/neocomplete.vim'
 
 Plug 'ervandew/supertab'
+" Plug 'sbdchd/neoformat' 
+Plug 'pangloss/vim-javascript'
+" Plug 'mxw/vim-jsx'
+Plug 'azakus/vim-webcomponents'
 
+" Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 nnoremap <Leader>o :CtrlP<CR>
@@ -58,6 +62,8 @@ nmap <leader>x <C-w>c
 
 " Duplicate line
 nnoremap dl mzyyP
+
+nnoremap Y y$
 
 set splitbelow
 set splitright
@@ -115,3 +121,13 @@ function! Multiple_cursors_after()
     exe 'NeoCompleteUnlock'
   endif
 endfunction
+
+" npm install -g prettier
+" https://github.com/jlongster/prettier
+" augroup fmt
+"   autocmd!
+"   autocmd BufWritePre * Neoformat
+" augroup END
+
+
+
