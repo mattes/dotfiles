@@ -32,6 +32,7 @@ Plug 'mileszs/ack.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'itchyny/lightline.vim'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'hashivim/vim-terraform'
 " Plug 'tpope/vim-surround'
 
 Plug 'fatih/vim-go'
@@ -104,6 +105,8 @@ let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 " let g:go_play_open_browser = 0
+
+let g:terraform_fmt_on_save = 1
 
 au FileType go nmap <Leader>gd <Plug>(go-doc-browser)
 

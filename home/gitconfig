@@ -9,3 +9,8 @@
 [user]
   name = Matthias Kadenbach
   email = matthias.kadenbach@gmail.com
+	signingkey = D31A7031
+[commit]
+	gpgsign = true
+[credential "https://github.com"]
+	templarbit = mattes
