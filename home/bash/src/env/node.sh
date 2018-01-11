@@ -1,3 +1,2 @@
-# init
-[[ which nodenv ]] && eval "$(nodenv init -)" > /dev/null
+which nodenv && eval "$(nodenv init -)" > /dev/null
 

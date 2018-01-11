@@ -132,5 +132,5 @@ endfunction
 "   autocmd BufWritePre * Neoformat
 " augroup END
 
-
+set foldmethod=manual 
 

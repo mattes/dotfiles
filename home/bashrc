@@ -18,3 +18,5 @@ if ! declare -F shell_is_interactive > /dev/null; then
     source ~/.localrc
   fi
 fi
+# added by travis gem
+[ -f /Users/matthias/.travis/travis.sh ] && source /Users/matthias/.travis/travis.sh
