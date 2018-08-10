@@ -1,14 +1,6 @@
 Dotfiles
 ========
 
-Solarized Scheme
-----------------
-
-Dowload [solarized_dark_mattes.terminal](/solarized_dark_mattes.terminal), double click, and make it the default in Terminal.app.
-The scheme is an adapted version of https://github.com/altercation/solarized/pull/314.
-I couldn't get the pre-packaged version that comes with the official Solarized download to work.
-
-
 Installation
 ------------
 
@@ -34,9 +26,14 @@ brew install rbenv ruby-build
 brew link --force curl
 rbenv install 2.3.3 && rbenv global 2.3.3 && rbenv rehash
 
+# install python
+brew install pyenv
+
+# install node
+brew install nodenv
+
 # install tmux and helpers
 brew install tmux
-gem install tmuxinator
 
 # install vim 
 brew install vim --with-lua
@@ -47,6 +44,9 @@ ln -s "$(which vim)" /usr/local/bin/vi
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 go get -u github.com/nsf/gocode # needed for go autocomplete
 # run `:PlugInstall` when vim is started for the first time
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+prefix + I # to install plugins
 ```
 
 
