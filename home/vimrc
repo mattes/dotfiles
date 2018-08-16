@@ -17,6 +17,10 @@ set smartindent
 set autoindent
 set noswapfile
 
+" Fix mouse clicks for big windows
+" https://stackoverflow.com/a/19253251/2142441
+set ttymouse=sgr
+
 set backspace=2 " Make DELETE work like normal
 
 set clipboard=unnamed

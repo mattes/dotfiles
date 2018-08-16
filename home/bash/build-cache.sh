@@ -19,7 +19,7 @@ function cache {
 
   # build expressions for generic plattform files
   # exclude all plattforms first
-  expressions=""
+  expressions="-name \"*.sh\" "
   for _plattform in "${PLATTFORMS[@]}"; do 
     expressions+="-not -name \"*$_plattform*\" "
   done
@@ -29,12 +29,14 @@ function cache {
   for dir in "${dirs[@]}"; do
     # get generic plattform files
     for file in $(eval find $dir -type file $expressions -not -name \"*sample.sh\"); do
+      printf "\n# $(basename $file)\n" >> $cache_file
       cat $file  >> $cache_file
       printf "\n" >> $cache_file
     done 
 
     # get specifiy plattform files
     for file in $(find $dir -type file -name "*.$plattform.sh" -not -name \"*sample.sh\"); do
+      printf "\n# $(basename $file)\n" >> $cache_file
       cat $file >> $cache_file
       printf "\n" >> $cache_file
     done
