@@ -8,7 +8,7 @@ for path in $(cd home && find . -type f -not -path './bash/*'); do
     mkdir -p "$dir"
   fi
 
-  rm $file || true > /dev/null
+  rm $file 2>/dev/null
   ln --force -s "$symlink" "$file"
 done
 
