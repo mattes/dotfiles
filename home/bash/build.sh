@@ -3,8 +3,6 @@
 out="cached.sh"
 
 # Delete file first
-# TODO: This shouldn't be necessary because the first > $out
-# resets the file. Yet, without the rm, running build.sh kills the SHELL.
 rm -f $out
 
 # add prefix
@@ -17,7 +15,6 @@ printf "\n" >> $out
 
 dirs=( "src/functions" "src/aliases" "src/env" )
 for dir in "${dirs[@]}"; do
-  # get generic plattform files
   for file in $dir/*.sh; do 
     printf "\n# $(basename $file)\n" >> $out
     cat $file  >> $out
