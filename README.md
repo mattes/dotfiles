@@ -3,6 +3,7 @@
 ## Install
 
 ```
+cd $HOME
 git clone git://github.com/mattes/dotfiles.git
 cd dotfiles
 ./install.sh
