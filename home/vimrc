@@ -154,3 +154,6 @@ set norelativenumber
 
 filetype plugin indent on
 autocmd FileType yaml setl indentkeys-=<:>
+
+
+" let g:go_info_mode = 'guru'
