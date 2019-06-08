@@ -1,1 +1,0 @@
-alias cddev='cd $DEVELOPER_PATH && ls'

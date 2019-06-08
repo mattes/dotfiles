@@ -1,1 +1,0 @@
-alias timestamp='date +%s'

@@ -1,1 +1,0 @@
-alias cdgo='cd $DEVELOPER_PATH/go/src && ls'
