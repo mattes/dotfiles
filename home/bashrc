@@ -9,7 +9,7 @@ case $- in
 esac
 
 
-source $HOME/dotfiles/bash/cached.sh
+source $HOME/dotfiles/home/bash/cached.sh
 
 
 # set variable identifying the chroot you work in (used in the prompt below)
