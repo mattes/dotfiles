@@ -129,8 +129,8 @@ function readlinkf {
 
 # reload_dotfiles.sh
 function reload_dotfiles {
-  (cd $HOME/dotfiles/bash && . build.sh)
-  source $HOME/dotfiles/bash/cached.sh
+  (cd $HOME/dotfiles/home/bash && . build.sh)
+  source $HOME/dotfiles/home/bash/cached.sh
 }
 
 
