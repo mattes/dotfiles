@@ -1,0 +1,1 @@
+[[ -e /usr/local/bin/ansible ]] && export ANSIBLE_NOCOWS=1
