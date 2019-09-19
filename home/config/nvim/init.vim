@@ -91,6 +91,7 @@ set splitright
 
 " Reload vimrc
 map <leader>r :source $MYVIMRC<CR>
+map <leader>R :e!<CR>
 
 " Configure CtrlP
 let g:ctrlp_user_command = "ripgrep.rg --no-ignore --hidden -g '!vendor' -g '!node_modules' -g '!.git' --files %s"

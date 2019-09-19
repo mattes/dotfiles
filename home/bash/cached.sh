@@ -134,6 +134,12 @@ function reload_dotfiles {
 }
 
 
+# rewrite_goimports.sh
+function rewrite_goimports {
+  find . -not -path .git -type f -print0 | xargs -0 sed -i "s;$1;$2;g"
+}
+
+
 # shell_is_interactive.sh
 function shell_is_interactive {
   case $- in
@@ -259,6 +265,11 @@ alias ll='ls -laFh --color'
 # alias ls='ls --color=auto'
 # alias dir='dir --color=auto'
 # alias vdir='vdir --color=auto'
+
+
+# postgres.sh
+alias psql='docker run -it --rm --network host postgres:11 psql'
+alias createdb='docker run -it --rm --network host postgres:11 createdb'
 
 
 # timestamp.sh
