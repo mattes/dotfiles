@@ -1,0 +1,1 @@
+alias dops='docker ps'
