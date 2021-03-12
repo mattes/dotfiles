@@ -35,3 +35,16 @@ Invoked with name sh
 ```
 
 Read more here: https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html
+
+
+## Initial Mac Setup
+
+```
+# Install Brew
+# https://brew.sh/
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+brew install git bash bash-completion coreutils tldr the_silver_searcher tmux
+```
+
+* [Docker for Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac/)
