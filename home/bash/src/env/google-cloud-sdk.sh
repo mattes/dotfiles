@@ -1,1 +1,0 @@
-[[ -d $HOME/google-cloud-sdk ]] && source "$HOME/google-cloud-sdk/path.bash.inc" && source "$HOME/google-cloud-sdk/completion.bash.inc"
