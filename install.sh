@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+#
+# Script to build dotfiles and symlink them under $HOME
+# ./install.sh
+# ./install.sh FORCE
 
 FORCE=$1
 

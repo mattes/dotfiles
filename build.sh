@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+#
+# Script to build dotfiles from source
 # ./build.sh <src> <dst>
 
 # Turn SRC and DST into absolute paths

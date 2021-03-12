@@ -13,25 +13,25 @@ cd dotfiles
 
 ```
 Invoked as an interactive login shell, or with --login
-/etc/profile
-/etc/bashrc
-/etc/bashrc_Apple_Terminal (/etc/bashrc_$TERM_PROGRAM)
-~/.bash_profile
-~/.bash_login
-~/.profile
-~/.bash_logout
+  /etc/profile
+  /etc/bashrc
+  /etc/bashrc_Apple_Terminal (/etc/bashrc_$TERM_PROGRAM)
+  ~/.bash_profile
+  ~/.bash_login
+  ~/.profile
+  ~/.bash_logout
 
 Invoked as an interactive non-login shell
-~/.bashrc
+  ~/.bashrc
 
 Invoked non-interactively
-$BASH_ENV
+  $BASH_ENV
 
 Invoked with name sh
-/etc/profile
-/etc/bashrc
-/etc/bashrc_Apple_Terminal (/etc/bashrc_$TERM_PROGRAM)
-~/.profile
+  /etc/profile
+  /etc/bashrc
+  /etc/bashrc_Apple_Terminal (/etc/bashrc_$TERM_PROGRAM)
+  ~/.profile
 ```
 
 Read more here: https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html
