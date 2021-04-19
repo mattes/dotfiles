@@ -1,4 +1,4 @@
 if [[ -e $HOME/.pyenv ]]; then
-  export PATH="$PYENV_ROOT/bin:$PATH"
+  export PATH="$HOME/.pyenv/bin:$PATH"
   eval "$(pyenv init -)" > /dev/null
 fi

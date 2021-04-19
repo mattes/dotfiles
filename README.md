@@ -44,7 +44,10 @@ Read more here: https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-
 # https://brew.sh/
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-brew install git bash bash-completion coreutils tldr the_silver_searcher tmux
+brew install git bash bash-completion coreutils tldr the_silver_searcher tmux jq \
+  goenv pyenv rbenv nodenv
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 * [Docker for Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac/)
