@@ -13,7 +13,7 @@ cd dotfiles
 
 [rbenv](https://github.com/rbenv/rbenv), 
 [goenv](https://github.com/syndbg/goenv), 
-[pyenv,](https://github.com/pyenv/pyenv),
+[pyenv](https://github.com/pyenv/pyenv),
 [nodenv](https://github.com/nodenv/nodenv) are great tools to manage different ruby, go, python, or node versions.
 They work by adding "shims" to the `$PATH` variable. Shims act as "proxy binaries" forwarding commands
 to the currently active tooling version. This works really great but comes with __substantial risks__.
