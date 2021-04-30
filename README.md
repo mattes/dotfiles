@@ -30,6 +30,10 @@ The above example is for goenv, but works similarly for all other version manage
 Good news: My dotfiles contain a hardened `$PATH`, mitigating this attack vector.
 Have a look at the bottom of the [build.sh](./build.sh) file for how it works.
 
+Did this happen before?
+  * [bizarre thing happening](https://github.com/nodenv/nodenv/issues/91)
+
+
 ## Initial Mac Setup
 
 ```
