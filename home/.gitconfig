@@ -11,3 +11,5 @@
 [user]
   email = matt.kadenbach@gmail.com
   name = Matt Kadenbach
+[core]
+	excludesfile = /Users/mattes/.gitignore

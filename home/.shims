@@ -1,0 +1,16 @@
+$NODENV_ROOT/shims/node
+$NODENV_ROOT/shims/npm
+$NODENV_ROOT/shims/npx
+
+$GOENV_ROOT/shims/go
+
+$RBENV_ROOT/shims/ruby
+$RBENV_ROOT/shims/rails
+$RBENV_ROOT/shims/irb
+$RBENV_ROOT/shims/bundle
+$RBENV_ROOT/shims/bundler
+$RBENV_ROOT/shims/gem
+$RBENV_ROOT/shims/rake
+$RBENV_ROOT/shims/rdoc
+$RBENV_ROOT/shims/ri
+$RBENV_ROOT/shims/erb
