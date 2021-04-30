@@ -9,7 +9,7 @@ cd dotfiles
 ./install.sh
 ```
 
-## Shims files
+## Shim files
 
 [rbenv](https://github.com/rbenv/rbenv), 
 [goenv](https://github.com/syndbg/goenv), 
@@ -22,12 +22,12 @@ Exploit scenario:
   1. A bad actor or unaware package maintainer creates a tool and publishes it to `github.com/example/sudo`.
   2. `go get github.com/example/sudo && goenv rehash` will install `sudo` to `$GOENV_ROOT/shims/sudo`.
   3. If you followed the goenv installation steps, your `$PATH` might look something like this:
-    `export PATH=$GOENV_ROOT/shims:/usr/local/bin:/usr/bin:/bin
+    `export PATH=$GOENV_ROOT/shims:/usr/local/bin:/usr/bin:/bin`
   4. `which sudo` will now return `$GOENV_ROOT/shims/sudo`. Not cool.
 
-The above example is for goenv, but works similarly for all other version manages.
+The above example is for goenv, but works similarly for all other version managers.
 
-Good news: My dotfiles contain a hardened `$PATH` mitigating this attack vector.
+Good news: My dotfiles contain a hardened `$PATH`, mitigating this attack vector.
 Have a look at the bottom of the [build.sh](./build.sh) file for how it works.
 
 ## Initial Mac Setup
