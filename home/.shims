@@ -34,3 +34,8 @@ $PYENV_ROOT/shims/python3
 $PYENV_ROOT/shims/python3-config
 $PYENV_ROOT/shims/python3.9
 $PYENV_ROOT/shims/python3.9-config
+$PYENV_ROOT/shims/easy_install-2.7
+$PYENV_ROOT/shims/python2
+$PYENV_ROOT/shims/python2.7
+$PYENV_ROOT/shims/python2.7-config
+$PYENV_ROOT/shims/smtpd.py
