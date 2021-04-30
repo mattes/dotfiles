@@ -21,6 +21,7 @@ printf "#!/usr/bin/env bash\n# AUTO-GENERATED FILE - Do not edit!\n\n" > $DST
 printf 'export CLEAN_PATH="/bin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin"\n' >> $DST
 printf 'export PATH="$CLEAN_PATH"\n' >> $DST
 printf 'export SHIM_PATH=""\n' >> $DST
+printf 'export TOOL_PATH=""\n' >> $DST
 
 # Find all $SRC/**/*.sh files and append to $DST
 for file in $(find "$SRC" -type f -name '*.sh'); do
@@ -33,9 +34,10 @@ done
 # 
 # 1. Search in /bin and /sbin first. These are hard system binaries. Don't mess with them.
 # 2. Next search in /usr/local/bin and /usr/local/sbin. This prioritizes Homebrew packages over MacOS packages.
-# 3. /usr/local/bin/shims are "whitelisted" rbenv, goenv, pyenv, nodenv, and so on binaries which take precedence over MacOS preinstalled packages.
-# 4. /usr/bin and /usr/sbin contain MacOS preinstalled binaries.
-# 5. Lastly, search for rbenv, goenv, pyenv, nodenv, and so on binaries.
+# 3. $TOOL_PATH contains path additions from ./srv/env dotfiles directory.
+# 4. /usr/local/bin/shims are "whitelisted" rbenv, goenv, pyenv, nodenv, and so on binaries which take precedence over MacOS preinstalled packages.
+# 5. /usr/bin and /usr/sbin contain MacOS preinstalled binaries.
+# 6. Lastly, search for rbenv, goenv, pyenv, nodenv, and so on binaries.
 # 
 # This search order prevents accidental usage of a `sudo` binary installed by node for example.
 #
@@ -45,4 +47,6 @@ done
 #   we first search in /usr/local/bin/shims.
 #   Run `shim_conflicts` to identify problematic /usr/bin binaries. Then update `$HOME/.shims` and run `reload_shims`.
 #
-printf '\n\nexport PATH="$(echo "/bin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/bin/shims:/usr/bin:/usr/sbin:$SHIM_PATH" | tr -s : | sed 's/:$//')"\n' >> $DST
+printf '\n\nexport PATH="$(echo "/bin:/sbin:/usr/local/bin:/usr/local/sbin:$TOOL_PATH:/usr/local/bin/shims:/usr/bin:/usr/sbin:$SHIM_PATH" | tr -s : | sed 's/:$//')"\n' >> $DST
+printf '\nunset SHIM_PATH' >> $DST
+printf '\nunset TOOL_PATH' >> $DST
