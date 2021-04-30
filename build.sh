@@ -46,7 +46,7 @@ done
 #   prevents changes to /usr/bin. In order for us to use rbenv's or pyenv's binaries,
 #   we first search in /usr/local/bin/shims.
 #   Run `shim_conflicts` to identify problematic /usr/bin binaries. Then update `$HOME/.shims` and run `reload_shims`.
+#   Don't forget to set `rbenv global 2.6.3`, `pyenv global 2.7.16` and so on.
 #
 printf '\n\nexport PATH="$(echo "/bin:/sbin:/usr/local/bin:/usr/local/sbin:$TOOL_PATH:/usr/local/bin/shims:/usr/bin:/usr/sbin:$SHIM_PATH" | tr -s : | sed 's/:$//')"\n' >> $DST
-printf '\nunset SHIM_PATH' >> $DST
 printf '\nunset TOOL_PATH' >> $DST
