@@ -44,6 +44,9 @@ Did this happen before?
 brew install git bash bash-completion coreutils tldr the_silver_searcher tmux jq \
   goenv pyenv rbenv nodenv
 
+brew install koekeishiya/formulae/skhd
+brew services start skhd # https://github.com/koekeishiya/skhd
+
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 

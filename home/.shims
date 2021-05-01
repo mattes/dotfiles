@@ -22,14 +22,12 @@ $PYENV_ROOT/shims/idle
 $PYENV_ROOT/shims/idle3
 $PYENV_ROOT/shims/idle3.9
 $PYENV_ROOT/shims/pip3
-$PYENV_ROOT/shims/pip3
 $PYENV_ROOT/shims/pip3.9
 $PYENV_ROOT/shims/pydoc
 $PYENV_ROOT/shims/pydoc3
 $PYENV_ROOT/shims/pydoc3.9
 $PYENV_ROOT/shims/python
 $PYENV_ROOT/shims/python-config
-$PYENV_ROOT/shims/python3
 $PYENV_ROOT/shims/python3
 $PYENV_ROOT/shims/python3-config
 $PYENV_ROOT/shims/python3.9
