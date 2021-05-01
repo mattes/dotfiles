@@ -1,15 +1,12 @@
-cmd - 1 : open -a "/Applications/Google Chrome.app"
-cmd - 2 : open -a "/System/Applications/Utilities/Terminal.app"
-cmd - 3 : open -a "/Applications/Visual Studio Code.app"
-cmd - 4 : open -a "/System/Library/CoreServices/Finder.app"
-
-cmd - 5 : open -a "/Applications/Bear.app"
-cmd - 6 : open -a "/System/Applications/Messages.app"
-cmd - 7 : open -a "/Applications/Notion.app"
-
-cmd - 8 : open -a "/Users/mattes/Applications/Chrome Apps.localized/Gmail.app"
-cmd - 9 : open -a "/Users/mattes/Applications/Chrome Apps.localized/Google Calendar.app"
-
-cmd - 0 : open -a "/Applications/Slack.app"
+cmd - 1 : open -a "/Applications/Google Chrome.app"; osascript -e 'tell application "System Events" to set value of attribute "AXFullScreen" of front window of (first process whose frontmost is true) to true'
+cmd - 2 : open -a "/System/Applications/Utilities/Terminal.app"; osascript -e 'tell application "System Events" to set value of attribute "AXFullScreen" of front window of (first process whose frontmost is true) to true'
+cmd - 3 : open -a "/Applications/Visual Studio Code.app"; osascript -e 'tell application "System Events" to set value of attribute "AXFullScreen" of front window of (first process whose frontmost is true) to true'
+cmd - 4 : open -a "/System/Library/CoreServices/Finder.app"; osascript -e 'tell application "System Events" to set value of attribute "AXFullScreen" of front window of (first process whose frontmost is true) to true'
+cmd - 5 : open -a "/Applications/Bear.app"; osascript -e 'tell application "System Events" to set value of attribute "AXFullScreen" of front window of (first process whose frontmost is true) to true'
+cmd - 6 : open -a "/System/Applications/Messages.app"; osascript -e 'tell application "System Events" to set value of attribute "AXFullScreen" of front window of (first process whose frontmost is true) to true'
+cmd - 7 : open -a "/Applications/Notion.app"; osascript -e 'tell application "System Events" to set value of attribute "AXFullScreen" of front window of (first process whose frontmost is true) to true'
+cmd - 8 : open -a "/Users/mattes/Applications/Chrome Apps.localized/Gmail.app"; osascript -e 'tell application "System Events" to set value of attribute "AXFullScreen" of front window of (first process whose frontmost is true) to true'
+cmd - 9 : open -a "/Users/mattes/Applications/Chrome Apps.localized/Google Calendar.app"; osascript -e 'tell application "System Events" to set value of attribute "AXFullScreen" of front window of (first process whose frontmost is true) to true'
+cmd - 0 : open -a "/Applications/Slack.app"; osascript -e 'tell application "System Events" to set value of attribute "AXFullScreen" of front window of (first process whose frontmost is true) to true'
 
 
